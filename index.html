@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Netflix Homepage</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Netflix</div>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">TV Shows</a>
+                <a href="#">Movies</a>
+                <a href="#">My List</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Unlimited movies, TV shows, and more.</h1>
+                <p>Watch anywhere. Cancel anytime.</p>
+                <button onclick="showSignUpModal()">Sign Up</button>
+            </div>
+        </section>
+
+        <section class="featured">
+            <!-- Add featured content here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Netflix</p>
+    </footer>
+
+    <div class="sign-up-modal" id="signUpModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSignUpModal()">&times;</span>
+            <!-- Add sign-up form here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
