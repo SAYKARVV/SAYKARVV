@@ -1,0 +1,850 @@
+ using System;
+
+namespace program
+{
+    internal class Program
+    {
+        void first()
+        {
+            Console.WriteLine("welcome to c# program");
+        }
+        void second()
+        {
+            Console.WriteLine("welcome");
+        }
+        void Addition()
+        { 
+            int a = 10;
+            int b = 20;
+            int c = a + b;
+            Console.WriteLine("Addition ="+c);
+            
+        }
+        void Substraction()
+        {
+            int a= 10;
+            int b= 20;
+            int c= a - b;
+            Console.WriteLine("Subtraction=" + c);
+        }
+        void multi()
+        {
+            int a = 10;
+            int b = 20;
+            int c = a * b;
+            Console.WriteLine("multi=" + c);
+
+        }
+        void div()
+        {
+            int a = 10;
+            int b = 20;
+            int c = a / b;
+            Console.WriteLine("div=" + c);
+        }
+//-------------------------- #arithmatic operator using input user:-----------------------------------------
+        void AdditionByuser()
+        {
+            int a, b, c;
+            Console.WriteLine("Enter first number:");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter second number:");
+            b = Convert.ToInt32(Console.ReadLine());
+            c = a + b;
+            Console.WriteLine("Addition="+c);
+        }
+        
+        void SubByuser()
+        {
+            int a, b, c;
+            Console.WriteLine("Enter first number:");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter second number:");
+            b = Convert.ToInt32(Console.ReadLine());
+            c = a - b;
+        }
+        void MultByuser()
+        {
+            int a, b, c;
+            Console.WriteLine("Enter first number:");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter second number:");
+            b = Convert.ToInt32(Console.ReadLine());
+            c = a * b;
+        }
+
+        void DivByuser()
+        {
+            int a, b, c;
+            Console.WriteLine("Enter first number:");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter second number:");
+            b = Convert.ToInt32(Console.ReadLine());
+            c = a / b;
+                
+        }
+        //-------------------------- #Unary operator:-----------------------------------------
+
+        void Unaryadd()
+        {
+            int a = 10;
+            a++;
+            Console.WriteLine("a=" + a);
+        }
+        void Unarysub()
+        {
+            int a = 10;
+            a--;
+            Console.WriteLine("a=" + a);
+        }
+
+        void Prefixdemo()
+        {
+            int a = 10, b;
+            b = ++a;
+            Console.WriteLine("a=" + a);
+            Console.WriteLine("b=" + b);
+
+        }
+
+        void Postfixdemo()
+        {
+            int a = 10, b;
+            b = a++;
+            Console.WriteLine("a=" + a);
+            Console.WriteLine("b=" + b);
+
+
+        }
+
+//----------------------------# comparison operator:--------------------------------
+
+         void Greaternum()
+        {
+            int a = 70;
+            if(a>100)
+            {
+                Console.WriteLine("a is greater than 100");
+            }
+            else
+            {
+                Console.WriteLine("a is less than 100");
+            }
+        }
+        //----------------Take user input using comparison-------
+           void GreaterByuser()
+        {
+            int a;
+            Console.WriteLine("Enter number:");
+            a = Convert.ToInt32(Console.ReadLine());
+
+            if(a>100)
+            {
+                Console.WriteLine("a is geater");
+            }
+            else
+            {
+                Console.WriteLine("a is less");
+            }
+
+        }
+
+    //-----------------------#voting eligible or not:
+
+         void VoteByuser()
+        {
+            int a ;
+            Console.WriteLine("Enter your age:");
+            a = Convert.ToInt32(Console.ReadLine());
+            if(a>=18)
+            {
+                Console.WriteLine("eligible for vote");
+            }
+            else
+            {
+                Console.WriteLine("not eligible for vote");
+            }
+        }
+        //switch case:--------------
+
+        void Switchcase()
+        {
+            int a, b, c, ch;
+            Console.WriteLine("Enter first number:");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter second number:");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("your choice\n1.Addition\n2.Substraction\n3.Multiplication\n4.Division");
+            ch = Convert.ToInt32(Console.ReadLine());
+            switch (ch)
+            {
+                case 1:
+                    {
+                        c = a + b;
+                        Console.WriteLine("Addition is:" + c);
+                        break;
+                    }
+                case 2:
+                    {
+                        c = a - b;
+                        Console.WriteLine("substraction is:" + c);
+                        break;
+                    }
+                case 3:
+                    {
+                        c = a * b;
+                        Console.WriteLine("Multiplication is:" + c);
+                        break;
+                    }
+                case 4:
+                    {
+                        c = a / b;
+                        Console.WriteLine("division  is:" + c);
+                        break;
+                    }
+                default:
+                    {
+                        Console.WriteLine("Enter anothr choice");
+                        break;
+                    }
+
+            
+            }
+        }
+
+
+
+//--------------------loops:--------------------------------------------------------------------------------------
+             /* #Syntax:
+              *  initialization
+              *  condition
+              *  increment/decrement
+              *  
+              *  #types of loops:
+              *  for,while,dowhile
+              *   */
+    //for loop---------------------
+
+    void Forloop()
+        {
+            int i;
+            for(i=1;i<=10;i++)
+            {
+                Console.WriteLine(i);
+            }
+        }
+   //5 table using for loop: ------------------
+     
+    void Tableloop()
+        {
+            int i;
+            for (i = 1; i <= 10; i ++)
+            {
+                Console.WriteLine(i*5);
+            }
+        }
+     //-----print welcome messege 10 time-----
+     void Welcome()
+        {
+            int i;
+            for (i = 1; i <= 10; i++)
+            {
+                Console.WriteLine("welcome");
+            }
+        }
+    //-----1 to 10 number addition----
+
+    void Add()
+        {
+            int i, sum = 0;
+            for (i = 1; i <= 10; i++)
+            {
+                sum = sum + i;
+                Console.WriteLine(sum);
+            }
+        }
+    //--1 to 20 even number---------
+
+    void Even()
+        {
+            int i;
+            for (i = 1; i <= 20; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    Console.WriteLine( i);
+                }
+               
+            }
+        }
+    // 1 to 20 even and odd
+    void Evenodd()
+        {
+            int i;
+            for(i=1;i<=20;i++)
+            {
+                if(i%2==0)
+                {
+                    Console.WriteLine("even no:" + i);
+                }
+                else
+                {
+                    Console.WriteLine("odd no:" + i);
+                }
+            }
+        }
+        //---color add even no-green,odd no-red-------
+
+        void Evenoddcolor()
+        {
+            int i;
+            for (i = 1; i <= 20; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("even no:" + i);
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("odd no:" + i);
+                }
+            }
+        }
+        // take 1 to 20 number divide 3 and 5 
+        //for loop:
+       //another method:
+       void Forloop2()
+        {
+            int i = 1;
+            for(;i<=10;)
+            {
+                Console.WriteLine(i);
+                i++;
+            }
+        }
+      
+        //while loop:
+        void Whileloop()
+        {
+            int i = 1;
+            while(i<=10)
+            {
+                Console.WriteLine(i);
+                i++;
+            }
+        }
+
+
+     //do-while loop:
+        void Dowhile()
+        {
+            int i = 1;
+            do
+            {
+                Console.WriteLine(i);
+                i++;
+            } while (i <= 10);
+        }
+
+        //------print welcome messege without using semicolon at the end of console.writeline-------
+
+        void Display1()
+        {
+            int i = 1;
+            for (; i <= 1; Console.WriteLine("Welcome")) 
+            {
+                i++;
+            }
+        }
+        //-------------swaping ------------
+        /*
+###Swap number:
+        method 1)
+  using 3rd variable:
+c=a;
+a=b;
+b=c;
+or
+method2)
+without using 3rd variable:
+b=a+b;
+a=b-a;
+b=b-a;
+*/
+        void Swap()
+        {
+            int a = 10,b= 20;
+            Console.WriteLine("Before swap");
+            Console.WriteLine("a=" + a);
+            Console.WriteLine("b=" + b);
+            b = a + b;
+            a = b-a;
+            b = b-a;
+            Console.WriteLine("After swaping:");
+            Console.WriteLine("a=" + a);
+            Console.WriteLine("b=" + b);
+ 
+        }
+    //-----------------Fibonacii series without using third variable----------
+
+         void Fibonaci()
+        {
+            int a = 0, b = 1;
+            for(int i = 1; i <= 10; i++)
+            {
+                Console.Write(a + " ");
+                b = a+b;
+                a = b - a;
+            }
+        }
+
+     //------------prime or not check----------------------
+
+        void Prime()
+        {
+            int i,cnt=0,n;
+            Console.WriteLine("Enter Number:");
+            n = Convert.ToInt32(Console.ReadLine());
+             for(i=2;i<n;i++)
+            {
+                if (n % i == 0)
+                {
+                    cnt++;
+                    break;
+                }
+               
+            }
+            if (cnt == 0)
+            {
+                Console.WriteLine("number prime");
+
+            }
+            else
+            {
+                Console.WriteLine("not prime");
+            }
+        }
+        //--------------------print factorial number----------------
+
+        void Factorial()
+        {
+            int num, fact=1;
+            Console.WriteLine("Enter any Number:");
+            num = Convert.ToInt32(Console.ReadLine());
+            for(int i = 1; i <= num; i++)
+            {
+
+                
+                fact = fact * i;
+                //Console.WriteLine("factoial is" + fact);
+            }
+            Console.WriteLine("factoial is" + fact);
+
+        }
+
+        /*
+    //--------------     * 3)following patern print ---------------------
+                          1/2+3/4+5/6+......+19/20
+      */
+        void Patern()
+        {
+            for (int i = 1; i <= 19; i = i + 2)
+            {
+                for (int j = i + 1; j <= i+1; j = j + 2) 
+                {
+                    Console.Write(i + "/" + j + "+");
+
+                }
+            }
+        }
+     //-------------------------   //4)number 20 how many divide number-----------------------
+
+        void Divide()
+        {
+            int num,rem;
+            Console.WriteLine("Enter any Number");
+            num= Convert.ToInt32(Console.ReadLine());
+
+            for(int i=1; i <= num; i++)
+            {
+                rem = num % i;
+                if (rem == 0)
+                {
+                    Console.WriteLine(i);
+
+                }
+            }
+        }
+    //---------------------------nested for loop--------------------
+       //patern
+
+        void Nested()
+        {
+            int i, j, k = 1;
+            for( i = 1; i <= 3; i++)
+            {
+                for (j = 1; j <= 3; j++)
+                {
+                    Console.Write(k + " ");
+                    k++;
+                }
+                Console.WriteLine();
+            }
+        }
+    //---------------------patern 1,5 number------------
+       void Numberpatern()
+        {
+            int i, j;
+            for (i = 1; i <= 5; i++)
+            {
+                for (j = 1; j <= i; j++)
+                {
+                    Console.Write(j+ " ");
+                }
+                Console.WriteLine();
+
+            }
+        }
+    //-------------------patern3-----------------------------
+
+        void Patern3()
+        {
+            int i, j;
+            for (i = 5; i <= 5; i++)
+            {
+                for (j = 1; j <= i; j++)
+                {
+                    Console.Write(i+ " ");
+                }
+                Console.WriteLine();
+            }
+        }
+        
+       //-------------------------------patern4-----------------------------
+
+        void Patern4()
+        {
+            int i, j;
+            for(i=5;i>=1;i--)                                                                                                                                                                                                                                       
+            {
+                for (j =1; j <=i;j++)
+                {
+                    Console.Write(j+ " ");
+                }
+                Console.WriteLine();
+            }
+        }
+    //------------------------patern5------------------------------------
+
+        void Patern5()
+        {
+            int i, j;
+            for(i=5;i>=1;i--)
+            {
+                for(j=1;j<=i;j++)
+                {
+                    Console.Write(i + " ");
+                }
+                Console.WriteLine();
+            }
+        }
+        //----------------------------patern6:--------------------------------
+
+        void Patern6()
+        {
+            int i, j;
+            for (i = 1; i <= 5; i++)
+            {
+                for (j = 5; j >= i; j--)
+                {
+                    Console.Write(j + " ");
+                }
+                Console.WriteLine();
+            }
+        }
+    //-----------------------patern7---------------------------------
+
+        void Patern7()
+        {
+            int i, j;
+            for (i = 1; i <= 5; i++)
+            {
+                for (j = 5; j >=i; j--)
+                {
+                    Console.Write(j + " ");
+                }
+                   Console.WriteLine();
+            }
+        }
+    //------------------------patern8----------------------
+
+        void Patern8()
+        {
+            int i, j,k;
+            for (i = 1; i <= 5; i++)
+            {
+                for (j = 1; j <=5- i; j++)
+                {
+                    Console.Write(" ");
+                }
+                for (k = 1; k <= i; k++)
+                {
+                    Console.Write("*");
+
+                }
+                Console.WriteLine();
+            }
+
+        }
+    //---------------------------------patern9-----------------------------
+
+        void Patern9()
+        {
+            int i, j, k;
+            for (i = 1; i <= 5; i++)
+            {
+                for (j = 1; j <= 5 - i; j++)
+                {
+                    Console.Write(" ");
+                }
+                    for (k = i; k >= 1; k--)
+                    {
+                        Console.Write("*");
+                    }
+                for (k = 2; k <= i; k++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+
+            }
+        }
+    //---------------------------------------* patern pyramid ---------------------------------
+
+        void Pyramid()
+        {
+            int i, j, k,n;
+            Console.WriteLine("Enter any number:");
+            n = Convert.ToInt32(Console.ReadLine());
+
+            for (i = 1; i <= n; i++)
+            {
+                for (j = 1; j <= n - i; j++)
+                {
+                    Console.Write(" ");
+                }
+                for (k = i; k >= 1; k--)
+                {
+                    Console.Write("*");
+                }
+                for (k = 2; k <= i; k++)
+                {
+                    Console.WriteLine("*");
+                }
+                Console.WriteLine();
+            }
+            
+        }
+    //-------------------------while loop using count of digit--------------------------------
+
+        void Countdigit()
+        {
+            int n = 123, cnt = 0;
+            while (n > 0)
+            {
+                cnt++;
+                n = n / 10;
+            }
+            Console.WriteLine("count of digit:" + cnt);
+        }
+    //------------------------while loop using Reverese Number----------------------------------
+
+        void ReverseNumber()
+        {
+            int n = 123, rem = 0, sum = 0;
+            while (n > 0)
+            {
+                rem = n % 10;
+                sum = rem + (sum * 10);
+                n = n / 10;
+            }
+            Console.WriteLine("reverse number:" + sum);
+        }
+
+        //------------------------decimal(1 to 9) to binary(0,1) convert-----------
+        void DecimaltoBi()
+        {
+            int n, rem; string str = " ";
+            Console.WriteLine("Enter Decimal Number:");
+            n = Convert.ToInt32(Console.ReadLine());
+
+            while (n != 0)
+            {
+                rem = n % 2;
+                str = rem + str;
+                n = n / 2;
+            }
+            Console.WriteLine("binary number is:" + str);
+        }
+        //-------------------------binary to decimal-------------------------
+
+        void Binarytodec()
+        {
+            int n, rem, sum = 0, p = 0;
+            Console.WriteLine("enter any binary num:");
+            n = Convert.ToInt32(Console.ReadLine());
+
+            while (n != 0)
+            {
+                rem = n % 10;
+                sum = sum + rem * (int)Math.Pow(2, p);
+                n = n / 10;
+                p++;
+            }
+            Console.WriteLine("Decimal no is:" + sum);
+        }
+    //------------------------Array:----------------------------------------------
+        
+        void Arraydemo()
+        {
+            int[] a = { 10, 20, 30, 40, 50 };
+            Console.WriteLine(a[3]);
+        }
+    //------------------------Array using for loop--------------------------------
+
+        void Arrayloop()
+        {
+            int i;
+            int[] a = { 10, 20, 30, 40, 50 };
+
+            for (i = 0; i < 5; i++)
+            {
+                Console.WriteLine(a[i]);
+            }
+        }
+    //--------------------------Array using length--------------------------
+        void Arraylen()
+        {
+            int i;
+            int[] a = { 10, 20, 30, 40, 50 };
+            for (i = 0; i < a.Length; i++)
+            {
+                Console.WriteLine(a[i]);
+            }
+        }
+    //------------------Array using foreach loop--------------------------------
+        
+        void Arrayforeach()
+        {
+            int[] a = { 10, 20, 30, 40, 50 };
+            foreach(int b in a)
+            {
+                Console.WriteLine(b);
+            }
+        }
+
+      //----------------------get user value print array------------------------
+      
+        void Arrayuser()
+        {
+            int i;
+            int[] a = new int[5];
+            Console.WriteLine("Enter 5 value into array:");
+            for (i = 0; i < 5; i++)
+            {
+                a[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.WriteLine("My array is:");
+            for (i = 0; i < 5; i++)
+            {
+                Console.WriteLine(a[i]);
+            }
+        }
+
+        //---------------------------get value user to print reverse num-----------------------
+
+        void Arrayrevrse()
+        {
+            int i;
+            int[] a = new int[10];
+            Console.WriteLine("Enter 10 values:");
+
+            for (i = 0; i < 10; i++)
+            {
+                a[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine("My reverse array is:");
+
+            for (i = 9; i >= 0; i--)
+            {
+                Console.WriteLine(a[i]);
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            Program p = new Program();
+            // p.first();
+            // p.second();
+            //p.Addition();
+            //p.Substraction();
+            //p.multi();
+            //p.div();
+            // p.AdditionByuser();
+            //p.SubByuser();
+            //  p.MultByuser();
+            //p.div();
+            // p.Unaryadd();
+            // p.Unarysub();
+            //p.Prefixdemo();
+            //p.Postfixdemo(); 
+            //p.GreaterByuser();
+            // p.VoteByuser();
+            //p.Switchcase();
+            //p.Forloop();
+            // p.Tableloop();
+            // p.Welcome();
+            // p.Add();
+            //p.Even();
+            //p.Evenodd();
+            // p.Evenoddcolor();
+            // p.Forloop2();
+            //p.Whileloop();
+            //p.Dowhile();
+            //p.Display1();
+            //p.Swap();
+            //p.Fibonaci();
+            // p.Prime();
+            //p.Factorial();
+            // p.Patern();
+            //p.Divide();
+            // p.Nested();
+            // p.Numberpatern();
+            //p.Patern3();
+            //p.Patern4();
+            // p.Patern5();
+            //p.Patern6();
+            // p.Patern7();
+            //p.Patern8();
+            //  p.Patern9();
+            //p.Pyramid();
+            //p.Countdigit();
+            //p.ReverseNumber();
+            // p.DecimaltoBi();
+            // p.Binarytodec();
+            //p.Arraydemo();
+            // p.Arrayloop();
+            // p.Arraylen();
+            // p.Arrayforeach();
+            //p.Arrayuser();
+            p.Arrayrevrse();
+           
+
+            Console.ReadLine();
+
+        }
+    }
+}

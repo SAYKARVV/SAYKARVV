@@ -1,0 +1,203 @@
+    //------------All string imp problem---------------------------
+    //----------print welcome in separate character-------------------
+
+       void String()
+        {
+            int i;
+            string str = "Welcome to Pune";
+            for (i = 0; i < str.Length; i++)
+            {
+                Console.WriteLine(str[i]);
+            }
+        }
+     
+    //------------print messege without spacing----------------
+    
+        void String1()
+        {
+            int i;
+            string str = "Welcome to pune";
+            for (i = 0; i < str.Length; i++)
+            {
+                if (str[i] != ' ')
+                {
+                    Console.Write(str[i]);
+
+                }
+            }
+        }
+  //--------------print separate line welcome to pune--------------------
+
+       void String2()
+        {
+            int i;
+            string str = "Welcome to pune";
+            string msg = " ";
+            str = str + " ";
+            for (i = 0; i < str.Length; i++)
+            {
+                if (str[i] !=' ')
+                {
+                    msg = msg + str[i];
+                }
+                else
+                {
+                    Console.WriteLine(msg);
+                    msg = " ";
+                }
+            }
+        }
+    //-----------------only reverse character string-------------------
+
+        void String3()
+        {
+            int i;
+            string str = "Welcome to Pune";
+            string msg = " ";
+            str += " ";
+            for (i = 0; i < str.Length; i++)
+            {
+                if (str[i] != ' ')
+                {
+                    msg = str[i] + msg;
+                }
+                else
+                {
+                    Console.WriteLine(msg + " ");
+                    msg = " ";
+                }
+            }
+        }
+    //-----------------Reverse print welcome to pune all string------------
+
+        void String4()
+        {
+            int i;
+            string str = "Welcome to Pune";
+            for (i = (str.Length - 1); i >= 0; i--)
+            {
+                Console.Write(str[i]);
+            }
+        }
+    //----------------print welcome to pune is pune to welcome-----------
+
+        void String5()
+        {
+            int i;
+            string str = "Welcome to Pune";
+            string msg = " ";
+            str = " " + str;
+            for (i = (str.Length - 1); i >= 0; i--)
+            {
+                if (str[i]!=' ')
+                {
+                    msg = str[i] + msg;
+                }
+                else
+                {
+                    Console.Write(msg + " ");
+                    msg = " ";
+                }
+            }
+        }
+    //------------------remove duplicate/unique character in string e.g:hello------------
+    
+        void String6()
+        {
+            int i, j, cnt;
+            string str = "hellllo";
+            string msg = " ";
+            for (i = 0; i < str.Length; i++)
+            {
+                cnt = 0;
+                for (j = 0; j < msg.Length; j++)
+                {
+                    if (str[i] == msg[j])
+                    {
+                        cnt++;
+                        break;
+                    }
+                }
+                if (cnt == 0)
+                {
+                    msg = msg + str[i];
+                }
+            }
+            Console.WriteLine(msg);
+        }
+        //---------------------Find palindrome string or not-------------
+
+      void String7()
+        {
+            int i, cnt = 0;
+            string str = "madama";
+            int n = str.Length - 1;
+
+            for (i = 0; i < str.Length/2; i++)
+            {
+                if (str[i] != str[n])
+                {
+                    cnt++;
+                    break;
+                }
+                n--;
+            }
+            if (cnt == 0)
+            {
+                Console.WriteLine("Palindrome");
+            }
+            else
+            {
+                Console.WriteLine("Not Palindrome");
+            }
+        }
+    //-----------------------any string grt user perticular character count-------
+
+        void String8()
+        {
+            string str;
+            char ch;
+            int i, cnt = 0;
+            Console.WriteLine("Enter any string");
+            str = Console.ReadLine();
+
+            Console.WriteLine("Enter any character");
+            ch = Convert.ToChar(Console.ReadLine());
+
+            int p = (int)ch;
+            if (p >= 97)
+            {
+                p = p - 32;
+            }
+            ch = (char)p;
+            for (i = 0; i < str.Length; i++)
+            {
+                int d = (int)str[i];
+                if (d >= 97)
+                {
+                    d = d - 32;
+                }
+                char c= (char)d;
+                if (ch == c)
+                {
+                    cnt++;
+                    break;
+                }
+            }
+            Console.WriteLine(cnt);
+        }
+        static void Main(string[] args)
+        {
+            Program p=new Program();
+            // p.Reverse();
+            //p.Prime();
+            //p.Decimal();
+            // p.Binary();
+            //p.String();
+            //p.String8();
+           
+
+            Console.ReadLine();
+        }
+    }
+}
